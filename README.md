@@ -1,6 +1,7 @@
-# `yumgroup` Cookbook
+# `groupinstall` Cookbook
 
 This cookbook provides a resource to install RHEL package groups, since the default Yum and DNF `package` providers cannot (CHEF-1392).
+Forked from https://github.com/mmmorris1975/yumgroup
 
 ## Requirements
 
@@ -14,7 +15,7 @@ This cookbook provides a resource to install RHEL package groups, since the defa
 ## Usage
 
 ```ruby
-yumgroup 'web-server'
+groupinstall 'web-server'
 ```
 
 ### Resource properties

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe 'yumgroup' do
+describe 'groupinstall' do
   platform 'centos'
-  step_into :yumgroup
+  step_into :groupinstall
 
   before do
     allow(Mixlib::ShellOut).to receive(:new).and_return(
@@ -21,13 +21,13 @@ describe 'yumgroup' do
     platform 'centos', '7'
 
     recipe do
-      yumgroup 'test' do
+      groupinstall 'test' do
         options '--opt'
       end
 
-      yumgroup 'Installed Group'
+      groupinstall 'Installed Group'
 
-      yumgroup 'remove-me' do
+      groupinstall 'remove-me' do
         action :remove
       end
     end
@@ -42,13 +42,13 @@ describe 'yumgroup' do
     platform 'centos', '8'
 
     recipe do
-      yumgroup 'test' do
+      groupinstall 'test' do
         options '--opt'
       end
 
-      yumgroup 'Installed Group'
+      groupinstall 'Installed Group'
 
-      yumgroup 'remove-me' do
+      groupinstall 'remove-me' do
         action :remove
       end
     end
@@ -62,13 +62,13 @@ describe 'yumgroup' do
     platform 'fedora'
 
     recipe do
-      yumgroup 'test' do
+      groupinstall 'test' do
         options '--opt'
       end
 
-      yumgroup 'Installed Group'
+      groupinstall 'Installed Group'
 
-      yumgroup 'remove-me' do
+      groupinstall 'remove-me' do
         action :remove
       end
     end
@@ -82,7 +82,7 @@ describe 'yumgroup' do
     platform 'ubuntu'
 
     recipe do
-      yumgroup 'test'
+      groupinstall 'test'
     end
 
     it { is_expected.to_not run_execute('dnf -qy group install  \'test\'') }

@@ -1,9 +1,9 @@
-yumgroup CHANGELOG
+groupinstall CHANGELOG
 ==================
 
 0.1.0
 -----
-- [michael.m.morris@gmail.com] - Initial release of yumgroup
+- [michael.m.morris@gmail.com] - Initial release of groupinstall
 
 0.2.0
 -----
@@ -33,3 +33,9 @@ yumgroup CHANGELOG
   - Cookstyle linting fixes
   - Enable `unified_mode` for Chef 17 compatibility
   - Guard against non-RHEL distros
+
+1.1.0
+-----
+- [@hunter86bg](https://github.com/hunter86bg)
+  - Fork the repo to bring it back to life
+  - Add support for groups with numbers (jboss-eap7-jdk11)

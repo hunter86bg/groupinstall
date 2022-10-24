@@ -21,13 +21,13 @@ platforms:
 suites:
   - name: install
     run_list:
-      - recipe[yumgroup-test::install]
+      - recipe[groupinstall-test::install]
   - name: upgrade
     run_list:
-      - recipe[yumgroup-test::upgrade]
+      - recipe[groupinstall-test::upgrade]
   - name: remove
     run_list:
-      - recipe[yumgroup-test::remove]
+      - recipe[groupinstall-test::remove]
     provisioner:
       # purposefully not idempotent
       multiple_converge: 1

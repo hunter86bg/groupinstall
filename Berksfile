@@ -1,5 +1,5 @@
 source 'https://supermarket.chef.io'
 
-cookbook 'yumgroup-test', path: 'test/cookbooks/yumgroup-test'
+cookbook 'groupinstall-test', path: 'test/cookbooks/groupinstall-test'
 
 metadata

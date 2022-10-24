@@ -4,7 +4,7 @@ log 'fedora warn' do
   only_if { platform?('fedora') }
 end
 
-yumgroup 'web-server' do
+groupinstall 'web-server' do
   if node['platform_version'].to_i >= 8
     options '--with-optional'
   else
@@ -22,7 +22,7 @@ end
 #   mode  '644'
 # end
 
-# yumgroup 'x' do
+# groupinstall 'x' do
 #   action :upgrade
 #   flush_cache ['before']
 #   cache_error_fatal true
