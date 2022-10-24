@@ -1,4 +1,4 @@
-module Yumgroup
+module Groupinstall
   module Cookbook
     module Helpers
       def installed_groups
@@ -27,7 +27,7 @@ module Yumgroup
         group_list.split("\n").map do |g|
           installed_section = true if g =~ /Installed (Environment )?Groups:/
           installed_section = false if g =~ /Available (Environment )?Groups:/
-          g.match(/^ +(\w.+) \(([a-z\-]+)\)$/) do |match|
+          g.match(/^ +(\w.+) \(([0-9a-z\-]+)\)$/) do |match|
             # ignore non-group lines
             next unless match && installed_section
 
