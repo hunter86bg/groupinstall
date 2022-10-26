@@ -6,7 +6,7 @@ property :flush_cache, Array, default: [], coerce: proc { |x| x.map(&:to_sym) }
 property :cache_error_fatal, [true, false], default: false
 
 action_class do
-  include groupinstall::Cookbook::Helpers
+  include Groupinstall::Cookbook::Helpers
 
   def package_manager
     if platform_family?('rhel') && node['platform_version'].to_i == 7

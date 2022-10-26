@@ -3,7 +3,7 @@ maintainer 'Strahil Nikolov'
 maintainer_email 'hunter86_bg@yahoo.com'
 license 'BSD-3-Clause'
 description 'Installs/Configures packages via yum/dnf groups'
-version '1.1.1'
+version '1.1.2'
 
 supports 'redhat', '>= 5.0'
 supports 'centos', '>= 5.0'
