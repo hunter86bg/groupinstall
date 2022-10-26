@@ -17,6 +17,13 @@ Forked from https://github.com/mmmorris1975/yumgroup
 ```ruby
 groupinstall 'web-server'
 ```
+```ruby
+groupinstall 'jboss-eap7' do
+  group 'jboss-eap7'
+  flush_cache [:before]
+  cache_error_fatal true
+end
+```
 
 ### Resource properties
 
@@ -26,15 +33,6 @@ groupinstall 'web-server'
 | `options`           | String                     |               | Any options to pass to Yum / DNF when installing                                            |
 | `flush_cache`       | Array: `[:before, :after]` | `[]`          | Update the metadata cache before or after the package action                                |
 | `cache_error_fatal` | `true` / `false`           | `false`       | Make updates of the metadata cache fatal                                                    |
-
-## Contributing
-
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
 
 ## License and Authors
 

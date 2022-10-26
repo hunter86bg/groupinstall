@@ -39,3 +39,8 @@ groupinstall CHANGELOG
 - [@hunter86bg](https://github.com/hunter86bg)
   - Fork the repo to bring it back to life
   - Add support for groups with numbers (jboss-eap7-jdk11)
+
+1.1.1
+-----
+- [@hunter86bg](https://github.com/hunter86bg)
+  - Try to resolve cookbook tests by adding CONTRIBUTING.md & TESTING.md
